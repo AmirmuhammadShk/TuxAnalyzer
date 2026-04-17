@@ -1,38 +1,64 @@
 # 🐧 TuxAnalyzer
 
-## 📌 Description
+**TuxAnalyzer** is a modern C++ command-line tool for analyzing and exploring codebases efficiently.
 
-**TuxAnalyzer** is a modern C++ command-line tool designed to help developers analyze and explore their codebases efficiently.
-
-It provides fast and practical utilities for scanning project files, searching for specific patterns, and gathering useful insights about the structure and size of a codebase.
-
-Built with modern C++ (C++17/20), TuxAnalyzer emphasizes clean design, performance, and safety by leveraging features such as RAII, smart pointers, STL algorithms, and multi-threading.
+It helps developers search, inspect, and understand projects using fast file scanning and multi-threaded processing.
 
 ---
 
-## ⚡ Features
+## ✨ Features
 
-- 🔍 Fast keyword search across files (e.g., TODO, FIXME)
-- 📊 Project statistics (file count, line count, etc.)
-- 📁 Detection of large or complex files
-- ⚡ Multi-threaded file scanning for better performance
-- 🧠 Smart filtering and result processing
-
----
-
-## 🎯 Purpose
-
-TuxAnalyzer is designed to help developers:
-- Quickly understand unfamiliar codebases
-- Locate important notes or issues in code (like TODOs)
-- Analyze project structure and complexity
-- Improve productivity when working with large projects
+- 🔍 Keyword search across files (e.g., TODO, FIXME)
+- 📊 Project statistics (file count, total lines)
+- 📁 Detect largest files in a project
+- ⚡ Multi-threaded search for high performance
+- 🧠 Built with modern C++ (C++17/20)
 
 ---
 
-## 🛠️ Built With
+## 🚀 Usage
 
-- Modern C++ (C++17/20)
-- STL (containers, algorithms, filesystem)
-- Multi-threading
-- Clean and modular design principles
+```bash
+tuxanalyzer find "TODO" .
+tuxanalyzer stats .
+tuxanalyzer largest .
+```
+
+---
+
+## 🛠️ Build
+
+```bash
+git clone https://github.com/your-username/TuxAnalyzer.git
+cd TuxAnalyzer
+
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+
+---
+
+## 🧠 Concepts Used
+
+- RAII (Resource Management)
+- Move Semantics
+- STL (vector, algorithms, filesystem)
+- C++17 (`std::optional`, structured bindings)
+- C++20 (modern design patterns)
+- Multi-threading (`std::thread`, mutex)
+
+---
+
+## 📌 Example Output
+
+```bash
+[RESULT] Found 3 matches
+./src/main.cpp:10 -> int main(int argc, char* argv[])
+```
+
+---
+
+## 📄 License
+
+MIT License
