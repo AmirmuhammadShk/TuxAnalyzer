@@ -20,9 +20,12 @@ int main(int argc, char* argv[]) {
             std::string path = command.args[1];
 
             auto files = FileScanner::scan(path);
+
+            std::cout << "[INFO] Scanning " << files.size() << " files...\n";
+
             auto results = SearchEngine::search(files, keyword);
 
-            std::cout << "[INFO] Found " << results.size() << " matches\n";
+            std::cout << "[RESULT] Found " << results.size() << " matches\n";
 
             for (const auto& r : results) {
                 std::cout << r.file << ":" << r.line_number
