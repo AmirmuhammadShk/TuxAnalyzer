@@ -11,5 +11,6 @@ add_executable(tuxanalyzer
     src/cli.cpp
     src/command.cpp
     src/file_scanner.cpp
+    src/search.cpp
 )
 target_include_directories(tuxanalyzer PRIVATE include)
